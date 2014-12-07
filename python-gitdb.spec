@@ -1,12 +1,12 @@
 %define 	module	gitdb
 Summary:	Python git object database
 Name:		python-%{module}
-Version:	0.5.4
+Version:	0.6.0
 Release:	1
 License:	BSD
 Group:		Development/Languages/Python
 Source0:	http://pypi.python.org/packages/source/g/gitdb/%{module}-%{version}.tar.gz
-# Source0-md5:	25353bb8d3ea527ba443dd88cd4e8a1c
+# Source0-md5:	fbd7d617e208e8d8029beeb09a18f845
 URL:		http://pypi.python.org/pypi/gitdb
 BuildRequires:	python-distribute
 BuildRequires:	rpm-pythonprov
@@ -43,8 +43,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS LICENSE
 %dir %{py_sitedir}/gitdb
-%dir %{py_sitedir}/gitdb/db
 %{py_sitedir}/gitdb/*.py[co]
 %attr(755,root,root) %{py_sitedir}/gitdb/*.so
+%dir %{py_sitedir}/gitdb/db
 %{py_sitedir}/gitdb/db/*.py[co]
+%dir %{py_sitedir}/gitdb/utils
+%{py_sitedir}/gitdb/utils/*.py[co]
 %{py_sitedir}/gitdb-*.egg-info
