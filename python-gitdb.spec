@@ -2,7 +2,7 @@
 Summary:	Python git object database
 Name:		python-%{module}
 Version:	0.6.0
-Release:	1
+Release:	2
 License:	BSD
 Group:		Development/Languages/Python
 Source0:	http://pypi.python.org/packages/source/g/gitdb/%{module}-%{version}.tar.gz
