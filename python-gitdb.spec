@@ -10,7 +10,7 @@ Source0:	http://pypi.python.org/packages/source/g/gitdb/%{module}-%{version}.tar
 URL:		http://pypi.python.org/pypi/gitdb
 BuildRequires:	python-distribute
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 Requires:	python-modules
 Requires:	python-async >= 0.6.1
 Requires:	python-smmap >= 0.8.0
