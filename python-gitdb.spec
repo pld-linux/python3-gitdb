@@ -1,12 +1,12 @@
-%define 	module	gitdb
+%define		module	gitdb
 Summary:	Python git object database
 Name:		python-%{module}
-Version:	0.6.0
-Release:	3
+Version:	2.0.3
+Release:	1
 License:	BSD
 Group:		Development/Languages/Python
-Source0:	http://pypi.python.org/packages/source/g/gitdb/%{module}-%{version}.tar.gz
-# Source0-md5:	fbd7d617e208e8d8029beeb09a18f845
+Source0:	https://github.com/gitpython-developers/gitdb/archive/%{version}/%{module}-%{version}.tar.gz
+# Source0-md5:	3554f89d04e55e6fcb9ac1103311cb3e
 URL:		http://pypi.python.org/pypi/gitdb
 BuildRequires:	python-distribute
 BuildRequires:	rpm-pythonprov
@@ -14,6 +14,7 @@ BuildRequires:	rpmbuild(macros) >= 1.710
 Requires:	python-modules
 Requires:	python-async >= 0.6.1
 Requires:	python-smmap >= 0.8.0
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -37,11 +38,12 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS LICENSE
-%dir %{py_sitedir}/gitdb
-%{py_sitedir}/gitdb/*.py[co]
-%attr(755,root,root) %{py_sitedir}/gitdb/*.so
-%dir %{py_sitedir}/gitdb/db
-%{py_sitedir}/gitdb/db/*.py[co]
-%dir %{py_sitedir}/gitdb/utils
-%{py_sitedir}/gitdb/utils/*.py[co]
-%{py_sitedir}/gitdb-*.egg-info
+%dir %{py_sitescriptdir}/gitdb
+%{py_sitescriptdir}/gitdb/*.py[co]
+%dir %{py_sitescriptdir}/gitdb/db
+%{py_sitescriptdir}/gitdb/db/*.py[co]
+%dir %{py_sitescriptdir}/gitdb/utils
+%{py_sitescriptdir}/gitdb/utils/*.py[co]
+%dir %{py_sitescriptdir}/gitdb/test
+%{py_sitescriptdir}/gitdb/test/*.py[co]
+%{py_sitescriptdir}/gitdb2-*.egg-info
