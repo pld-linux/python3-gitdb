@@ -1,12 +1,12 @@
 %define		module	gitdb
 Summary:	Python git object database
 Name:		python-%{module}
-Version:	2.0.3
+Version:	2.0.5
 Release:	1
 License:	BSD
 Group:		Development/Languages/Python
 Source0:	https://github.com/gitpython-developers/gitdb/archive/%{version}/%{module}-%{version}.tar.gz
-# Source0-md5:	3554f89d04e55e6fcb9ac1103311cb3e
+# Source0-md5:	d33484c57b9e4599d5540bf0e7906881
 URL:		http://pypi.python.org/pypi/gitdb
 BuildRequires:	python-distribute
 BuildRequires:	rpm-pythonprov
