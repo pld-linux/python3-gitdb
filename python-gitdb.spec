@@ -10,7 +10,7 @@ Summary:	GitDB - pure-Python git object database
 Summary(pl.UTF-8):	GitDB - czysto pythonowa baza danych obiektów gita
 Name:		python-%{module}
 Version:	2.0.5
-Release:	2
+Release:	3
 License:	BSD
 Group:		Development/Languages/Python
 #Source0Download: https://github.com/gitpython-developers/gitdb/releases
