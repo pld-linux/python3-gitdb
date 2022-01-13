@@ -9,13 +9,13 @@
 Summary:	GitDB - pure-Python git object database
 Summary(pl.UTF-8):	GitDB - czysto pythonowa baza danych obiektów gita
 Name:		python-%{module}
-Version:	2.0.5
-Release:	4
+Version:	4.0.9
+Release:	1
 License:	BSD
 Group:		Development/Languages/Python
 #Source0Download: https://github.com/gitpython-developers/gitdb/releases
 Source0:	https://github.com/gitpython-developers/gitdb/archive/%{version}/%{module}-%{version}.tar.gz
-# Source0-md5:	d33484c57b9e4599d5540bf0e7906881
+# Source0-md5:	2f3e4166f6cd72e7946202d1f1144f29
 URL:		https://github.com/gitpython-developers/gitdb
 %if %{with python2}
 BuildRequires:	python-modules >= 1:2.7
@@ -127,7 +127,7 @@ rm -rf $RPM_BUILD_ROOT
 %{py_sitescriptdir}/gitdb/*.py[co]
 %{py_sitescriptdir}/gitdb/db
 %{py_sitescriptdir}/gitdb/utils
-%{py_sitescriptdir}/gitdb2-%{version}-py*.egg-info
+%{py_sitescriptdir}/gitdb*-%{version}-py*.egg-info
 %endif
 
 %if %{with python3}
@@ -139,7 +139,7 @@ rm -rf $RPM_BUILD_ROOT
 %{py3_sitescriptdir}/gitdb/db
 %{py3_sitescriptdir}/gitdb/utils
 %{py3_sitescriptdir}/gitdb/__pycache__
-%{py3_sitescriptdir}/gitdb2-%{version}-py*.egg-info
+%{py3_sitescriptdir}/gitdb*-%{version}-py*.egg-info
 %endif
 
 %if %{with doc}
